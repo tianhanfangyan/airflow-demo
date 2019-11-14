@@ -1,7 +1,6 @@
 import airflow
 from airflow import DAG
 from airflow.operators.bash_operator import BashOperator
-from airflow.operators.python_operator import PythonOperator
 
 from datetime import datetime, timedelta
 
@@ -15,7 +14,7 @@ default_args = {
 }
 
 # this is my job's workdir
-WORK_DIR = "./job"
+WORK_DIR = "./"
 
 # dag
 dag = DAG('hello_world', default_args=default_args, schedule_interval="@daily")
